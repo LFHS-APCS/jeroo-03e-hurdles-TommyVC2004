@@ -13,7 +13,22 @@ public class Jeroo extends JerooBase {
 
     public void hurdles()
     {
-
+  while (!isFlower(HERE)) {
+if (!isNet(AHEAD)) {
+  if (!isClear(RIGHT)) {
+    if (isWater(AHEAD)) 
+      turn(LEFT);
+    else 
+      hop();
+  }
+  else {
+    turn(RIGHT);
+    hop();
+  }
+}
+else
+  turn(LEFT);
+  }
     }
 
     // Do NOT touch the code below here
